@@ -16,8 +16,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Researcher{
   a [owl:NamedIndividual];
-  asio:plays [asio:MasterStudent] ;
-  asio:IsMemberOf @:Institute 
+  asio:plays [asio:MasterStudent] 
 }
 
 
