@@ -28,6 +28,131 @@
 @prefix humantechreadiness: <http://sweetontology.net/humanTechReadiness#> .
 
 
+###  http://purl.org/hercules/asio/core#AcademicSubject
+asio:AcademicSubject rdf:type owl:Class ;
+                     rdfs:comment "Matière académique"@fr ;
+                     rdfs:label "Academic subject"@en ,
+                                "Asignatura académica"@es ,
+                                "Assignatura acadèmica"@ca-es ,
+                                "Unidade curricular acadêmica"@pt-pt ;
+                     skos:altLabel "Cadeira"@pt .
+
+###  http://purl.org/hercules/asio/core#AcademicPublication
+asio:AcademicPublication rdf:type owl:Class ;
+                         rdfs:subClassOf asio:Publication ;
+                         rdfs:label "Academic publication"@en ,
+                                    "Publicació acadèmica"@ca-ad ,
+                                    "Publicació acadèmica"@ca-es ,
+                                    "Publicación académica"@es ,
+                                    "Publicación académica"@gl ,
+                                    "Publication académique"@fr ,
+                                    "Publicação acadêmica"@pt ;
+                         skos:prefLabel "Academic publication"@en ,
+                                        "Publicació acadèmica"@ca-ad ,
+                                        "Publicació acadèmica"@ca-es ,
+                                        "Publicación académica"@es ,
+                                        "Publicación académica"@gl ,
+                                        "Publication académique"@fr ,
+                                        "Publicação acadêmica"@pt .
+
+
+
+###  http://purl.org/hercules/asio/core#Company
+asio:Company rdf:type owl:Class ;
+             rdfs:subClassOf foaf:Organization ;
+             owl:disjointWith asio:University ;
+             rdfs:comment "A corporation or business organization which makes goods (in a broad sense) in an organized manner and sells them to the public for profit."@en ,
+                          "Uma organização com personalidade jurídica, a qual dispõe dos médios necessários para a produção e obtenção de bens ou serviços destinados ao intercâmbio."@pt ,
+                          "Una organització amb personalitat jurídica, la qual disposa dels mitjans necessaris per a la producció i es dedica a combinar-los per obtenir béns o serveis destinats a l'intercanvi."@ca ,
+                          "Una organización con personalidad jurídica que dispone de los medios necesarios para la producción y se dedica a combinarlos para obtener bienes o servicios destinados al intercambio."@es ;
+             rdfs:label "Company"@en ,
+                        "Empresa"@ca-ad ,
+                        "Empresa"@ca-es ,
+                        "Empresa"@es ,
+                        "Empresa"@gl ,
+                        "Empresa"@pt ,
+                        "Entreprise"@fr ;
+             skos:prefLabel "Company"@en ,
+                            "Empresa"@ca-ad ,
+                            "Empresa"@ca-es ,
+                            "Empresa"@es ,
+                            "Empresa"@gl ,
+                            "Empresa"@pt ,
+                            "Entreprise"@fr .
+
+
+###  http://purl.org/hercules/asio/core#Conference
+asio:Conference rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ;
+                rdfs:comment "A meeting for consultation or discussion. [Source: http://purl.org/ontology/bibo/Conference]"@en ;
+                rdfs:label "Conference"@en .
+
+
+###  http://purl.org/hercules/asio/core#ConferencePoster
+asio:ConferencePoster rdf:type owl:Class ;
+                      rdfs:subClassOf asio:Publication ;
+                      rdfs:comment "The digital file (or physical equivalent), if available after the conference, vs. the act of attending/presenting."@en ;
+                      rdfs:label "Conference poster"@en .
+
+###  http://purl.org/hercules/asio/core#Article
+asio:Article rdf:type owl:Class ;
+             rdfs:subClassOf asio:ScientificPublication ;
+             rdfs:label "Article"@en ;
+             skos:prefLabel "Article"@en .
+
+
+###  http://purl.org/hercules/asio/core#BacherlorsDegree
+asio:BacherlorsDegree rdf:type owl:Class ;
+                      rdfs:subClassOf asio:AcademicDegree ;
+                      rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
+                      rdfs:label "Bachelor's degree"@en ,
+                                 "Licenciatura (pós-Bologna)"@pt-pt ,
+                                 "Títol de bàtxelor"@ca-ad ,
+                                 "Títol de grau"@ca-es ,
+                                 "Título de grado"@es ;
+                      skos:altLabel "Bàtxelor"@ca-ad ,
+                                    "Grado"@es ,
+                                    "Gradu"@eu ,
+                                    "Grao"@gl ,
+                                    "Grau"@ca-es ,
+                                    "Grau"@pt ;
+                      skos:prefLabel "Bachelor's degree"@en ,
+                                     "Licenciatura (pós-Bologna)"@pt-pt ,
+                                     "Títol de bàtxelor"@ca-ad ,
+                                     "Títol de grau"@ca-es ,
+                                     "Título de grado"@es .
+
+
+###  http://purl.org/hercules/asio/core#Book
+asio:Book rdf:type owl:Class ;
+          rdfs:subClassOf asio:ScientificPublication ;
+          rdfs:label "Book"@en ,
+                     "Libro"@es ,
+                     "Livre"@fr ,
+                     "Livro"@pt ,
+                     "Llibre"@ca-ad ,
+                     "Llibre"@ca-es ;
+          skos:prefLabel "Book"@en ,
+                         "Libro"@es ,
+                         "Livre"@fr ,
+                         "Livro"@pt ,
+                         "Llibre"@ca .
+
+
+
+###  http://purl.org/hercules/asio/core#DoctoralProgram
+asio:DoctoralProgram rdf:type owl:Class ;
+                     rdfs:label "Doctoral program"@en ,
+                                "Doctoral programme"@en-gb ,
+                                "Programa de doctorado"@es ,
+                                "Programa de doctorat"@ca-es ,
+                                "Programa de doutoramento"@gl ,
+                                "Programa de doutoramento"@pt ,
+                                "Programme de doctorat"@fr ;
+                     skos:altLabel "PhD program"@en-us ,
+                                   "PhD programme"@en-gb .
+
+
 ###  http://purl.org/hercules/asio/core#ResearchInstitute
 asio:ResearchInstitute rdf:type owl:Class ;
                        rdfs:subClassOf foaf:Organization ;
@@ -46,4 +171,15 @@ asio:ResearchInstitute rdf:type owl:Class ;
                                       "Research institute"@en .
                                       
 
-asio:WESO rdf:type asio:ResearchInstitute .
+###  http://purl.org/hercules/asio/core#hasResearchLine
+asio:hasResearchLine rdf:type owl:ObjectProperty ;
+                     rdfs:domain foaf:Agent ;
+                     rdfs:range skos:Concept ;
+                     rdfs:comment "a property linking organizations or groups with scientific domains"@en ;
+                     rdfs:label "has research line"@en .
+
+
+###  http://purl.org/hercules/asio/core#hasScientificDomain
+asio:hasScientificDomain rdf:type owl:ObjectProperty ;
+                         rdfs:range skos:Concept ;
+                         rdfs:label "has scientific domain"@en .
