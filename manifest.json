@@ -1,0 +1,26 @@
+[
+  {
+    "test_name" : "Probar que Pablo es un Investigador",
+    "ontology" : "asio.ttl",
+    "data": "asio-individuals.ttl",
+    "schema": "schemas.shex",
+    "in_shape_map": "shapemap_in.sm",
+    "out_shape_map": "shapemap_out.sm"
+  },
+   {
+    "test_name" : "Probar que Pablo es un Investigador",
+    "ontology" : "asio.ttl",
+    "data": "asio-individuals.ttl",
+    "schema": "schemas.shex",
+    "in_shape_map": "shapemap_in.sm",
+    "out_shape_map": "shapemap_out.sm"
+  },
+   {
+    "test_name" : "Probar que Pablo es un Investigador",
+    "ontology" : "asio.ttl",
+    "data": "asio-individuals.ttl",
+    "schema": "schemas.shex",
+    "in_shape_map": "shapemap_in.sm",
+    "out_shape_map": "shapemap_out.sm"
+  }
+]
