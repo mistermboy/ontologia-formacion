@@ -19,7 +19,3 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
   asio:plays [asio:MasterStudent] 
 }
 
-
-:Institute extra a{
-a [asio:ResearchInstitute]
-}
