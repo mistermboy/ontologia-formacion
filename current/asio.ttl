@@ -183,3 +183,6 @@ asio:hasResearchLine rdf:type owl:ObjectProperty ;
 asio:hasScientificDomain rdf:type owl:ObjectProperty ;
                          rdfs:range skos:Concept ;
                          rdfs:label "has scientific domain"@en .
+
+
+asio:Perro rdf:type owl:Class .
