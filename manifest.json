@@ -1,0 +1,10 @@
+[
+ {
+    "test_name": "Test that Pablo is a Person",
+    "ontology": "asio.ttl",
+    "data": "asio-individuals.ttl",
+    "schema": "schemas.shex",
+    "in_shape_map": "shapemap_in.sm",
+    "out_shape_map": "shapemap_out.sm"
+  }
+]
