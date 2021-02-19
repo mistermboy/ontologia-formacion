@@ -186,3 +186,492 @@ asio:hasScientificDomain rdf:type owl:ObjectProperty ;
 
 
 asio:Perro rdf:type owl:Class .
+
+
+asio:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf asio:Publication ;
+             rdfs:comment "A list of items in a collection; an ordered compilation of item descriptions and sufficient information to afford access to them."@en ;
+             rdfs:label "Catalog"@en .
+
+
+###  http://purl.org/hercules/asio/core#CollectedDocument
+asio:CollectedDocument rdf:type owl:Class ;
+                       rdfs:subClassOf asio:ScientificPublication ;
+                       rdfs:comment "A document consisting of collections of previously published works."@en ;
+                       rdfs:label "Collected document"@en .
+
+
+###  http://purl.org/hercules/asio/core#Company
+asio:Company rdf:type owl:Class ;
+             rdfs:subClassOf foaf:Organization ;
+             owl:disjointWith asio:University ;
+             rdfs:comment "A corporation or business organization which makes goods (in a broad sense) in an organized manner and sells them to the public for profit."@en ,
+                          "Uma organização com personalidade jurídica, a qual dispõe dos médios necessários para a produção e obtenção de bens ou serviços destinados ao intercâmbio."@pt ,
+                          "Una organització amb personalitat jurídica, la qual disposa dels mitjans necessaris per a la producció i es dedica a combinar-los per obtenir béns o serveis destinats a l'intercanvi."@ca ,
+                          "Una organización con personalidad jurídica que dispone de los medios necesarios para la producción y se dedica a combinarlos para obtener bienes o servicios destinados al intercambio."@es ;
+             rdfs:label "Company"@en ,
+                        "Empresa"@ca-ad ,
+                        "Empresa"@ca-es ,
+                        "Empresa"@es ,
+                        "Empresa"@gl ,
+                        "Empresa"@pt ,
+                        "Entreprise"@fr ;
+             skos:prefLabel "Company"@en ,
+                            "Empresa"@ca-ad ,
+                            "Empresa"@ca-es ,
+                            "Empresa"@es ,
+                            "Empresa"@gl ,
+                            "Empresa"@pt ,
+                            "Entreprise"@fr .
+
+
+###  http://purl.org/hercules/asio/core#Conference
+asio:Conference rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ;
+                rdfs:comment "A meeting for consultation or discussion. [Source: http://purl.org/ontology/bibo/Conference]"@en ;
+                rdfs:label "Conference"@en .
+
+
+###  http://purl.org/hercules/asio/core#ConferencePoster
+asio:ConferencePoster rdf:type owl:Class ;
+                      rdfs:subClassOf asio:Publication ;
+                      rdfs:comment "The digital file (or physical equivalent), if available after the conference, vs. the act of attending/presenting."@en ;
+                      rdfs:label "Conference poster"@en .
+
+
+###  http://purl.org/hercules/asio/core#Context
+asio:Context rdf:type owl:Class ;
+             rdfs:comment "Contexts are similar to situations or state of affairs providing interpretation coordinates for profiles. In the most simple case, these coordinates are just geographical/spatial or temporal coordinates. The ASIO core ontology does not impose a fixed definition of context. It is deliberately wide in order to enable third-parties the adequation of the meaning of context according to their modeling needs and requirements."@en ;
+             rdfs:label "Context"@ca-es ,
+                        "Context"@en ,
+                        "Contexto"@es ,
+                        "Contexto"@pt .
+
+
+###  http://purl.org/hercules/asio/core#Contract
+asio:Contract rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/cerif/frapo/FinancialEntity> ;
+              rdfs:label "Contract"@en ,
+                         "Contracte"@ca-ad ,
+                         "Contracte"@ca-es ,
+                         "Contrat"@fr ,
+                         "Contrato"@es ,
+                         "Contrato"@gl ,
+                         "Contrato"@pt ;
+              skos:prefLabel "Contract"@en ,
+                             "Contracte"@ca-ad ,
+                             "Contracte"@ca-es ,
+                             "Contrat"@fr ,
+                             "Contrato"@es ,
+                             "Contrato"@gl ,
+                             "Contrato"@pt .
+
+
+###  http://purl.org/hercules/asio/core#Country
+asio:Country rdf:type owl:Class ;
+             rdfs:subClassOf modules:GeopoliticalEntities ;
+             rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
+             rdfs:label "Country"@en ,
+                        "Herrialde"@eu ,
+                        "Pays"@fr ,
+                        "País"@ca-ad ,
+                        "País"@ca-es ,
+                        "País"@es ,
+                        "País"@pt ;
+             skos:prefLabel "Country"@en ,
+                            "Herrialde"@eu ,
+                            "Pays"@fr ,
+                            "País"@ca-ad ,
+                            "País"@ca-es ,
+                            "País"@es ,
+                            "País"@gl ,
+                            "País"@pt .
+
+
+###  http://purl.org/hercules/asio/core#Database
+asio:Database rdf:type owl:Class ;
+              rdfs:subClassOf asio:CollectedDocument .
+
+
+###  http://purl.org/hercules/asio/core#DoctoralDegree
+asio:DoctoralDegree rdf:type owl:Class ;
+                    rdfs:subClassOf asio:AcademicDegree ;
+                    rdfs:label "Doctorado"@es ,
+                               "Doctoral degree"@en ,
+                               "Doctorat"@ca-ad ,
+                               "Doctorat"@ca-es ,
+                               "Doctorat"@fr-be ,
+                               "Doctorat"@fr-ca ,
+                               "Doctorat"@fr-ch ,
+                               "Doctorat"@fr-fr ,
+                               "Doktorego"@eu ,
+                               "Doutoramento"@gl ,
+                               "Doutoramento"@pt ;
+                    skos:altLabel "Doctorate"@en ,
+                                  "Doktoretza"@eu ;
+                    skos:prefLabel "Doctorado"@es ,
+                                   "Doctoral degree"@en ,
+                                   "Doctorat"@ca-ad ,
+                                   "Doctorat"@ca-es ,
+                                   "Doctorat"@fr-be ,
+                                   "Doctorat"@fr-ca ,
+                                   "Doctorat"@fr-ch ,
+                                   "Doctorat"@fr-fr ,
+                                   "Doktorego"@eu ,
+                                   "Doutoramento"@gl ,
+                                   "Doutoramento"@pt .
+
+
+###  http://purl.org/hercules/asio/core#EditedPublication
+asio:EditedPublication rdf:type owl:Class ;
+                       rdfs:subClassOf asio:ScientificPublication ;
+                       rdfs:label "Edited publication"@en .
+
+
+###  http://purl.org/hercules/asio/core#EmploymentContract
+asio:EmploymentContract rdf:type owl:Class ;
+                        rdfs:subClassOf asio:Contract ;
+                        rdfs:label "Contracte de treball"@ca-ad ,
+                                   "Contracte de treball"@ca-es ,
+                                   "Contrat de travail"@fr ,
+                                   "Contrato de trabajo"@es ,
+                                   "Contrato de trabalho"@pt ,
+                                   "Employment contract"@en ;
+                        skos:prefLabel "Contracte de treball"@ca-ad ,
+                                       "Contracte de treball"@ca-es ,
+                                       "Contrat de travail"@fr ,
+                                       "Contrato de trabajo"@es ,
+                                       "Contrato de trabalho"@pt ,
+                                       "Employment contract"@en .
+
+
+###  http://purl.org/hercules/asio/core#EuropeanProject
+asio:EuropeanProject rdf:type owl:Class ;
+                     rdfs:subClassOf foaf:Project ;
+                     rdfs:comment "A project developed and funded at the European level."@en ;
+                     rdfs:label "European project"@en ,
+                                "Projecte europeu"@ca-ad ,
+                                "Projecte europeu"@ca-es ,
+                                "Projet européen"@fr ,
+                                "Projeto europeu"@pt ,
+                                "Proyecto europeo"@es ;
+                     skos:prefLabel "European project"@en ,
+                                    "Projecte europeu"@ca-ad ,
+                                    "Projecte europeu"@ca-es ,
+                                    "Projet européen"@fr ,
+                                    "Projeto europeu"@pt ,
+                                    "Proyecto europeo"@es .
+
+
+###  http://purl.org/hercules/asio/core#EventSeries
+asio:EventSeries rdf:type owl:Class ;
+                 rdfs:comment "A generic class which may include a conference series, a course section, a seminar series, or a workshop series. When possible, use one of these more specific classes."@en ;
+                 rdfs:label "Event series"@en .
+
+
+###  http://purl.org/hercules/asio/core#Funding
+asio:Funding rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.org/cerif/frapo/FinancialEntity> .
+
+
+###  http://purl.org/hercules/asio/core#FundingAgency
+asio:FundingAgency rdf:type owl:Class ;
+                   rdfs:label "Funding agency"@en .
+
+
+###  http://purl.org/hercules/asio/core#FundingOrganization
+asio:FundingOrganization rdf:type owl:Class ;
+                         rdfs:subClassOf foaf:Organization ;
+                         rdfs:label "Funding organization"@en .
+
+
+###  http://purl.org/hercules/asio/core#FundingProgramme
+asio:FundingProgramme rdf:type owl:Class ;
+                      rdfs:comment "A programme of related funded projects, typically established by a funding organization."@en ;
+                      rdfs:label "Funding programme"@en .
+
+
+###  http://purl.org/hercules/asio/core#Grant
+asio:Grant rdf:type owl:Class ;
+           rdfs:subClassOf asio:Funding ;
+           rdfs:comment "A financial award provided by a funding organisation for a particular project or purpose, usually awarded on the basis of a competitive application."@en ;
+           rdfs:label "Grant"@en .
+
+
+###  http://purl.org/hercules/asio/core#InternalProject
+asio:InternalProject rdf:type owl:Class ;
+                     rdfs:subClassOf foaf:Project ;
+                     rdfs:label "Internal project"@en .
+
+
+###  http://purl.org/hercules/asio/core#InternationalProject
+asio:InternationalProject rdf:type owl:Class ;
+                          rdfs:subClassOf foaf:Project ;
+                          rdfs:comment "A consortium project integrated by partners from diverse countries beyond the scope of the European Union."@en ;
+                          rdfs:label "International project"@en ,
+                                     "Projecte internacional"@ca-es ,
+                                     "Projet international"@fr ,
+                                     "Projeto internacional"@pt ,
+                                     "Proyecto internacional"@es .
+
+
+###  http://purl.org/hercules/asio/core#Manual
+asio:Manual rdf:type owl:Class ;
+            rdfs:subClassOf asio:ScientificPublication ;
+            rdfs:comment "A book of instructions or guide to a specific topic."@en ;
+            rdfs:label "Manual"@en ;
+            skos:altLabel "Handbook"@en ;
+            skos:prefLabel "Manual"@en .
+
+
+###  http://purl.org/hercules/asio/core#MastersDegree
+asio:MastersDegree rdf:type owl:Class ;
+                   rdfs:subClassOf asio:AcademicDegree ;
+                   rdfs:label "Magister Scientiae"@es-ve ,
+                              "Master's degree"@en ,
+                              "Maîtrise universitaire"@fr-be ,
+                              "Maîtrise universitaire"@fr-ca ,
+                              "Maîtrise universitaire"@fr-ch ,
+                              "Maîtrise universitaire"@fr-fr ,
+                              "Mestrado"@pt-br ,
+                              "Mestrado"@pt-pt ,
+                              "Màster universitari"@ca-ad ,
+                              "Màster universitari"@ca-es ,
+                              "Máster universitario"@es-es ,
+                              "Máster universitario"@gl ;
+                   skos:altLabel "Mestrado universitario"@gl ,
+                                 "Mestratge universitari"@ca-ad ,
+                                 "Mestratge universitari"@ca-es ;
+                   skos:prefLabel "Magister Scientiae"@es-ve ,
+                                  "Master's degree"@en ,
+                                  "Maîtrise universitaire"@fr-be ,
+                                  "Maîtrise universitaire"@fr-ca ,
+                                  "Maîtrise universitaire"@fr-ch ,
+                                  "Maîtrise universitaire"@fr-fr ,
+                                  "Mestrado"@pt-br ,
+                                  "Mestrado"@pt-pt ,
+                                  "Màster universitari"@ca-ad ,
+                                  "Màster universitari"@ca-es ,
+                                  "Máster universitario"@es-es ,
+                                  "Máster universitario"@gl .
+
+
+###  http://purl.org/hercules/asio/core#MastersThesis
+asio:MastersThesis rdf:type owl:Class ;
+                   rdfs:subClassOf asio:Thesis ;
+                   owl:disjointWith asio:PhDThesis ;
+                   rdfs:comment "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."@en ;
+                   rdfs:label "Dissertação de mestrado"@pt-br ,
+                              "Dissertação de mestrado"@pt-pt ,
+                              "Master's thesis"@en ,
+                              "Mémoire de maîtrise"@fr-ca ,
+                              "Mémoire de maîtrise"@fr-fr ,
+                              "Tese de mestrado"@pt-ao ,
+                              "Tesis de maestría"@es-ar ,
+                              "Tesis de maestría"@es-co ,
+                              "Tesis de maestría"@es-cu ,
+                              "Tesis de maestría"@es-mx ,
+                              "Trabajo de fin de máster"@es-es ,
+                              "Traballo de fin de máster"@gl ,
+                              "Treball de fi de màster"@ca-ad ,
+                              "Treball de fi de màster"@ca-es ;
+                   skos:altLabel "MALa"@es-eu ,
+                                 "TFM"@ca-ad ,
+                                 "TFM"@ca-es ,
+                                 "TFM"@es-es ,
+                                 "TFM"@gl ,
+                                 "Trabajo de fin de master"@es-es ,
+                                 "Traballo de fin de mestrado"@gl ,
+                                 "Treball de fi de master"@ca-ad ,
+                                 "Treball de fi de master"@ca-es ,
+                                 "Treball de fi de mestratge"@ca-ad ,
+                                 "Treball de fi de mestratge"@ca-es ;
+                   skos:prefLabel "Dissertação de mestrado"@pt-br ,
+                                  "Dissertação de mestrado"@pt-pt ,
+                                  "Master Amaierako Lana"@eu ,
+                                  "Master's thesis"@en ,
+                                  "Mémoire de maîtrise"@fr-ca ,
+                                  "Mémoire de maîtrise"@fr-fr ,
+                                  "Tese de mestrado"@pt-ao ,
+                                  "Tesis de maestría"@es-ar ,
+                                  "Tesis de maestría"@es-co ,
+                                  "Tesis de maestría"@es-cu ,
+                                  "Tesis de maestría"@es-mx ,
+                                  "Trabajo de fin de máster"@es-es ,
+                                  "Traballo de fin de máster"@gl ,
+                                  "Treball de fi de màster"@ca-ad ,
+                                  "Treball de fi de màster"@ca-es .
+
+
+###  http://purl.org/hercules/asio/core#NationalProject
+asio:NationalProject rdf:type owl:Class ;
+                     rdfs:subClassOf foaf:Project ;
+                     rdfs:comment "A project developed and funded at the national level."@en ;
+                     rdfs:label "National project"@en ,
+                                "Projecte nacional"@ca-ad ,
+                                "Projecte nacional"@ca-es ,
+                                "Projet national"@fr ,
+                                "Projeto nacional"@pt ,
+                                "Proyecto nacional"@es ;
+                     skos:prefLabel "National project"@en ,
+                                    "Projecte nacional"@ca-ad ,
+                                    "Projecte nacional"@ca-es ,
+                                    "Projet national"@fr ,
+                                    "Projeto nacional"@pt ,
+                                    "Proyecto nacional"@es .
+
+
+###  http://purl.org/hercules/asio/core#Patent
+asio:Patent rdf:type owl:Class ;
+            rdfs:comment "A form of intellectual property that gives its owner the legal right to exclude others from making, using, selling and importing an invention for a limited period of years, in exchange for publishing an enabling public disclosure of the invention."@en ;
+            rdfs:label "Patent"@ca-ad ,
+                       "Patent"@ca-es ,
+                       "Patent"@en ,
+                       "Patent"@fr ,
+                       "Patente"@es ,
+                       "Patente"@eu ,
+                       "Patente"@gl ,
+                       "Patente"@pt ;
+            skos:prefLabel "Patent"@ca ,
+                           "Patent"@en ,
+                           "Patent"@fr ,
+                           "Patente"@es ,
+                           "Patente"@eu ,
+                           "Patente"@gl ,
+                           "Patente"@pt .
+
+
+###  http://purl.org/hercules/asio/core#PeerReviewedArticle
+asio:PeerReviewedArticle rdf:type owl:Class ;
+                         rdfs:subClassOf asio:Article ;
+                         rdfs:label "Peer-reviewed article"@en .
+
+
+###  http://purl.org/hercules/asio/core#PhDThesis
+asio:PhDThesis rdf:type owl:Class ;
+               rdfs:subClassOf asio:Thesis ;
+               rdfs:comment "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a doctoral degree."@en ;
+               rdfs:label "Doctoral thesis"@en ,
+                          "Doktore tesi"@eu ,
+                          "Tese de doutoramento"@pt ,
+                          "Tese doctoral"@gl ,
+                          "Tesi doctoral"@ca-ad ,
+                          "Tesi doctoral"@ca-es ,
+                          "Tesis doctoral"@es ,
+                          "Thèse doctorale"@fr ;
+               skos:altLabel "Tese de doutoramento"@gl ;
+               skos:prefLabel "Doctoral thesis"@en ,
+                              "Doktorego tesi"@eu ,
+                              "Tese de doutoramento"@pt ,
+                              "Tese doctoral"@gl ,
+                              "Tesi doctoral"@ca-ad ,
+                              "Tesi doctoral"@ca-es ,
+                              "Tesis doctoral"@es ,
+                              "Thèse doctorale"@fr .
+
+
+###  http://purl.org/hercules/asio/core#Proceedings
+asio:Proceedings rdf:type owl:Class ;
+                 rdfs:subClassOf asio:Book ;
+                 rdfs:comment "A book integrated by a compilation of documents published from an event, such as a conference."@en ;
+                 rdfs:label "Proceedings"@en .
+
+
+###  http://purl.org/hercules/asio/core#Product
+asio:Product rdf:type owl:Class ;
+             rdfs:comment "A product as outcome of a project."@en ;
+             rdfs:label "Product"@en .
+
+
+###  http://purl.org/hercules/asio/core#Profile
+asio:Profile rdf:type owl:Class ;
+             rdfs:comment "A profile represents a particular person playing a given role. In the specialised literature it is also known as a \"qua-individual\". The ASIO core ontology extends the meaning of profile to capture \"person-as-role\", \"person-at-context\" and \"person-in-community\"."@en ,
+                          "Perfil"@ca-es ,
+                          "Perfil"@es ,
+                          "Profile"@en .
+
+
+###  http://purl.org/hercules/asio/core#ProjectBudget
+asio:ProjectBudget rdf:type owl:Class ;
+                   rdfs:subClassOf asio:Budget ;
+                   rdfs:comment "The budget established or devoted to a project."@en ;
+                   rdfs:label "Budget de projet"@fr ,
+                              "Orçamento de projeto"@pt ,
+                              "Pressupost de projecte"@ca-ad ,
+                              "Pressupost de projecte"@ca-es ,
+                              "Presupuesto de proyecto"@es ,
+                              "Project budget"@en ;
+                   skos:prefLabel "Budget de projet"@fr ,
+                                  "Orçamento de projeto"@pt ,
+                                  "Pressupost de projecte"@ca-ad ,
+                                  "Pressupost de projecte"@ca-es ,
+                                  "Presupuesto de proyecto"@es ,
+                                  "Project budget"@en .
+
+
+###  http://purl.org/hercules/asio/core#Prototype
+asio:Prototype rdf:type owl:Class ;
+               rdfs:subClassOf asio:Product ;
+               rdfs:comment "A product prototype"@en ;
+               rdfs:label "Prototype"@en .
+
+
+###  http://purl.org/hercules/asio/core#Publication
+asio:Publication rdf:type owl:Class ;
+                 rdfs:comment "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ;
+                 rdfs:label "Publicació"@ca-ad ,
+                            "Publicació"@ca-es ,
+                            "Publicación"@es ,
+                            "Publicación"@gl ,
+                            "Publication"@en ,
+                            "Publication"@fr ,
+                            "Publicação"@pt ;
+                 skos:prefLabel "Publicació"@ca-ad ,
+                                "Publicació"@ca-es ,
+                                "Publicación"@es ,
+                                "Publicación"@gl ,
+                                "Publication"@en ,
+                                "Publication"@fr ,
+                                "Publicação"@pt .
+
+
+###  http://purl.org/hercules/asio/core#QualifiedValue
+asio:QualifiedValue rdf:type owl:Class ;
+                    rdfs:comment "A class to represent a qualified value as used in Wikibase."@en ;
+                    rdfs:label "Qualified value"@en .
+
+
+###  http://purl.org/hercules/asio/core#RegionalProject
+asio:RegionalProject rdf:type owl:Class ;
+                     rdfs:subClassOf foaf:Project ;
+                     rdfs:comment "A project developed and funded at the regional level."@en ;
+                     rdfs:label "Projecte regional"@ca-ad ,
+                                "Projecte regional"@ca-es ,
+                                "Projet régional"@fr ,
+                                "Projeto regional"@pt ,
+                                "Proyecto regional"@es ,
+                                "Regional project"@en ;
+                     skos:prefLabel "Projecte regional"@ca-ad ,
+                                    "Projecte regional"@ca-es ,
+                                    "Projet régional"@fr ,
+                                    "Projeto regional"@pt ,
+                                    "Proyecto regional"@es ,
+                                    "Regional project"@en .
+
+
+###  http://purl.org/hercules/asio/core#Report
+asio:Report rdf:type owl:Class ;
+            rdfs:subClassOf asio:Publication ;
+            rdfs:comment "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc."@en ;
+            rdfs:label "Report"@en .
+
+
+###  http://purl.org/hercules/asio/core#ResearchContribution
+asio:ResearchContribution rdf:type owl:Class ;
+                          rdfs:label "Research contribution"@en .
+
+
+###  http://purl.org/hercules/asio/core#ResearchField
+asio:ResearchField rdf:type owl:Class ;
+                   rdfs:label "Research field"@en .
+
