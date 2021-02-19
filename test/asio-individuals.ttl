@@ -16,6 +16,9 @@
 
 asioIndividuals:Pablo rdf:type owl:NamedIndividual ;
           asio:plays asio:MasterStudent ;
-          isMemberOf asioIndividuals:WESO ;
+          asio:isMemberOf asioIndividuals:WESO ;
           rdfs:label "Pablo Menéndez"@es,
                       "Pablo Menendez"@en .
+
+
+asioIndividuals:WESO rdf:type owl:NamedIndividual, asio:ResearchInstitute .
